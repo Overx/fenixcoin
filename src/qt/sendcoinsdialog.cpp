@@ -36,7 +36,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
 #endif
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)"));
+    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a Fenixcoin address (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)"));
 #endif
 
     addEntry();

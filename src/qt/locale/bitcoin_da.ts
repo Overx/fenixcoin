@@ -1407,8 +1407,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Fenixcoin-adressen som betalingen skal sendes til (f.eks. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address to send the payment to (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Fenixcoin-adressen som betalingen skal sendes til (f.eks. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1448,8 +1448,8 @@ Adresse: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Indtast en Fenixcoin-adresse (f.eks. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>Enter a Fenixcoin address (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Indtast en Fenixcoin-adresse (f.eks. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
 </context>
 <context>
@@ -1471,8 +1471,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Fenixcoin-adressen som beskeden skal underskrives med (f.eks. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address to sign the message with (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Fenixcoin-adressen som beskeden skal underskrives med (f.eks. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1544,8 +1544,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Fenixcoin-adressen som beskeden er underskrevet med (f.eks. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address the message was signed with (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Fenixcoin-adressen som beskeden er underskrevet med (f.eks. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -1565,8 +1565,8 @@ Adresse: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Indtast en Fenixcoin-adresse (f.eks. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>Enter a Fenixcoin address (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Indtast en Fenixcoin-adresse (f.eks. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2237,8 +2237,8 @@ Adresse: %4
     </message>
     <message>
         <location line="-28"/>
-        <source>Listen for connections on &lt;port&gt; (default: 19390 or testnet: 19391)</source>
-        <translation>Lyt til forbindelser på &lt;port&gt; (standard: 19390 eller testnetværk: 19391)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 33206 or testnet: 16412)</source>
+        <translation>Lyt til forbindelser på &lt;port&gt; (standard: 33206 eller testnetværk: 16412)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2272,8 +2272,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+27"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 19380 or testnet: 19388)</source>
-        <translation>Lyt til JSON-RPC-forbindelser på &lt;port&gt; (standard: 19380 eller testnetværk: 19388)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 32107 or testnet: 56261)</source>
+        <translation>Lyt til JSON-RPC-forbindelser på &lt;port&gt; (standard: 32107 eller testnetværk: 56261)</translation>
     </message>
     <message>
         <location line="+37"/>

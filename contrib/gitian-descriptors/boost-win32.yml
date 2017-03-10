@@ -16,13 +16,13 @@ files:
 - "boost-mingw-gas-cross-compile-2013-03-03.patch"
 script: |
   # Defines
-  INSFNXLPREFIX="$OUTDIR/staging/boost"
+  INSTALLPREFIX="$OUTDIR/staging/boost"
   HOST=i686-w64-mingw32
   # Input Integrity Check
   echo "fff00023dd79486d444c8e29922f4072e1d451fc5a4d2b6075852ead7f2b7b52  boost_1_55_0.tar.bz2" | shasum -c
   echo "d2b7f6a1d7051faef3c9cf41a92fa3671d905ef1e1da920d07651a43299f6268  boost-mingw-gas-cross-compile-2013-03-03.patch" | shasum -c
 
-  mkdir -p "$INSFNXLPREFIX"
+  mkdir -p "$INSTALLPREFIX"
   tar xjf boost_1_55_0.tar.bz2
   cd boost_1_55_0
   GCCVERSION=$($HOST-g++ -E -dM $(mktemp --suffix=.h) | grep __VERSION__ | cut -d ' ' -f 3 | cut -d '"' -f 2)
@@ -57,9 +57,9 @@ script: |
   # Note: Might need these options in the future for 64bit builds.
   # "Please note that address-model=64 must be given to bjam command line on 64bit Windows for 64bit build; otherwise 32bit code will be generated."
   # "For cross-compiling the lib you must specify certain additional properties at bjam command line: target-os, abi, binary-format, architecture and address-model."
-  ./bjam toolset=gcc binary-format=pe target-os=windows threadapi=win32 threading=multi variant=release link=static --user-config=user-config.jam --without-mpi --without-python -sNO_BZIP2=1 -sNO_ZLIB=1 --layout=tagged --build-type=complete --prefix="$INSFNXLPREFIX" $MAKEOPTS install
+  ./bjam toolset=gcc binary-format=pe target-os=windows threadapi=win32 threading=multi variant=release link=static --user-config=user-config.jam --without-mpi --without-python -sNO_BZIP2=1 -sNO_ZLIB=1 --layout=tagged --build-type=complete --prefix="$INSTALLPREFIX" $MAKEOPTS install
 
-  cd "$INSFNXLPREFIX"
+  cd "$INSTALLPREFIX"
   export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
   export FAKETIME=$REFERENCE_DATETIME
   zip -r boost-win32-1.55.0-gitian-r6.zip *

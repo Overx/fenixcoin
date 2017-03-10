@@ -33,13 +33,13 @@ using namespace json_spirit;
 static std::string strRPCUserColonPass;
 
 // These are created by StartRPCThreads, destroyed in StopRPCThreads
-static asio::io_service* rpc_io_service         = NULL;
-static ssl::context* rpc_ssl_context            = NULL;
-static boost::thread_group* rpc_worker_group    = NULL;
+static asio::io_service* rpc_io_service = NULL;
+static ssl::context* rpc_ssl_context = NULL;
+static boost::thread_group* rpc_worker_group = NULL;
 
 static inline unsigned short GetDefaultRPCPort()
 {
-    return GetBoolArg("-testnet", false) ? 19388 : 19380;
+    return GetBoolArg("-testnet", false) ? 56261 : 32107;
 }
 
 Object JSONRPCError(int code, const string& message)

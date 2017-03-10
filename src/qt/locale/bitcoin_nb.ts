@@ -1408,8 +1408,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Adressen betalingen skal sendes til  (f.eks. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address to send the payment to (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Adressen betalingen skal sendes til  (f.eks. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1449,8 +1449,8 @@ Adresse: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Skriv inn en Fenixcoin adresse (f.eks. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>Enter a Fenixcoin address (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Skriv inn en Fenixcoin adresse (f.eks. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
 </context>
 <context>
@@ -1472,8 +1472,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Adressen for signering av meldingen (f.eks. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address to sign the message with (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Adressen for signering av meldingen (f.eks. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1545,8 +1545,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Adressen meldingen var signert med (f.eks. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address the message was signed with (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Adressen meldingen var signert med (f.eks. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -1566,8 +1566,8 @@ Adresse: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Skriv inn en Fenixcoin adresse (f.eks. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>Enter a Fenixcoin address (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Skriv inn en Fenixcoin adresse (f.eks. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2238,8 +2238,8 @@ Adresse: %4
     </message>
     <message>
         <location line="-28"/>
-        <source>Listen for connections on &lt;port&gt; (default: 19390 or testnet: 19391)</source>
-        <translation>Lytt etter tilkoblinger på &lt;port&gt; (standardverdi: 19390 eller testnet: 19391)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 33206 or testnet: 16412)</source>
+        <translation>Lytt etter tilkoblinger på &lt;port&gt; (standardverdi: 33206 eller testnet: 16412)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2273,8 +2273,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+27"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 19380 or testnet: 19388)</source>
-        <translation>Lytt etter JSON-RPC tilkoblinger på &lt;port&gt; (standardverdi: 19380 or testnet: 19388)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 32107 or testnet: 56261)</source>
+        <translation>Lytt etter JSON-RPC tilkoblinger på &lt;port&gt; (standardverdi: 32107 or testnet: 56261)</translation>
     </message>
     <message>
         <location line="+37"/>

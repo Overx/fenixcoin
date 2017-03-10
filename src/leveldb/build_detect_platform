@@ -76,8 +76,8 @@ case "$TARGET_OS" in
         PLATFORM=OS_MACOSX
         COMMON_FLAGS="$MEMCMP_FLAG -DOS_MACOSX"
         PLATFORM_SHARED_EXT=dylib
-        [ -z "$INSFNXL_PATH" ] && INSFNXL_PATH=`pwd`
-        PLATFORM_SHARED_LDFLAGS="-dynamiclib -install_name $INSFNXL_PATH/"
+        [ -z "$INSTALL_PATH" ] && INSTALL_PATH=`pwd`
+        PLATFORM_SHARED_LDFLAGS="-dynamiclib -install_name $INSTALL_PATH/"
         PORT_FILE=port/port_posix.cc
         ;;
     Linux)

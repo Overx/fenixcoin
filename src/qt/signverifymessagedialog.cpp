@@ -28,10 +28,10 @@ SignVerifyMessageDialog::SignVerifyMessageDialog(QWidget *parent) :
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->addressIn_SM->setPlaceholderText(tr("Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)"));
+    ui->addressIn_SM->setPlaceholderText(tr("Enter a Fenixcoin address (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)"));
     ui->signatureOut_SM->setPlaceholderText(tr("Click \"Sign Message\" to generate signature"));
 
-    ui->addressIn_VM->setPlaceholderText(tr("Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)"));
+    ui->addressIn_VM->setPlaceholderText(tr("Enter a Fenixcoin address (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)"));
     ui->signatureIn_VM->setPlaceholderText(tr("Enter Fenixcoin signature"));
 #endif
 

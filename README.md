@@ -1,7 +1,7 @@
 Fenixcoin integration/staging tree
 ================================
 
-https://fenixcoin.in
+http://fenixcoin.io
 
 Copyright (c) 2009-2014 Bitcoin Developers
 Copyright (c) 2011-2014 Litecoin Developers
@@ -13,14 +13,14 @@ What is Fenixcoin?
 Fenixcoin is a lite version of Bitcoin using scrypt as a proof-of-work algorithm.
  - 3 minute block targets
  - subsidy halves in 840960 blocks (~4.8 years)
- - ~600 million total coins
+ - ~100 million total coins
 
 The rest is the same as Bitcoin.
  - 50 coins per block
  - 1440 blocks to retarget difficulty
 
 For more information, as well as an immediately useable, binary version of
-the Fenixcoin client sofware, see https://fenixcoin.in.
+the Fenixcoin client sofware, see http://fenixcoin.io.
 
 License
 -------

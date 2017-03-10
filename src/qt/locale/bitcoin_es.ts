@@ -1410,8 +1410,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>La dirección a la que enviar el pago (p. ej. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address to send the payment to (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>La dirección a la que enviar el pago (p. ej. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1451,8 +1451,8 @@ Dirección: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Introduzca una dirección Fenixcoin (ej. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>Enter a Fenixcoin address (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Introduzca una dirección Fenixcoin (ej. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
 </context>
 <context>
@@ -1474,8 +1474,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>La dirección con la que firmar el mensaje (ej. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address to sign the message with (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>La dirección con la que firmar el mensaje (ej. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1547,8 +1547,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>La dirección con la que se firmó el mensaje (ej. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address the message was signed with (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>La dirección con la que se firmó el mensaje (ej. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -1568,8 +1568,8 @@ Dirección: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Introduzca una dirección Fenixcoin (ej. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>Enter a Fenixcoin address (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Introduzca una dirección Fenixcoin (ej. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2245,8 +2245,8 @@ Dirección: %4
     </message>
     <message>
         <location line="-28"/>
-        <source>Listen for connections on &lt;port&gt; (default: 19390 or testnet: 19391)</source>
-        <translation>Escuchar conexiones en &lt;puerto&gt; (predeterminado: 19390 o testnet: 19391)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 33206 or testnet: 16412)</source>
+        <translation>Escuchar conexiones en &lt;puerto&gt; (predeterminado: 33206 o testnet: 16412)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2280,8 +2280,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+27"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 19380 or testnet: 19388)</source>
-        <translation>Escuchar conexiones JSON-RPC en &lt;puerto&gt; (predeterminado: 19380 o testnet:19388)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 32107 or testnet: 56261)</source>
+        <translation>Escuchar conexiones JSON-RPC en &lt;puerto&gt; (predeterminado: 32107 o testnet:56261)</translation>
     </message>
     <message>
         <location line="+37"/>

@@ -1406,8 +1406,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Die Zahlungsadresse der Überweisung (z.B. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address to send the payment to (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Die Zahlungsadresse der Überweisung (z.B. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1447,8 +1447,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Fenixcoin-Adresse eingeben (z.B. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>Enter a Fenixcoin address (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Fenixcoin-Adresse eingeben (z.B. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
 </context>
 <context>
@@ -1470,8 +1470,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Die Adresse mit der die Nachricht signiert wird (z.B. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address to sign the message with (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Die Adresse mit der die Nachricht signiert wird (z.B. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1543,8 +1543,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Die Adresse mit der die Nachricht signiert wurde (z.B. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address the message was signed with (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Die Adresse mit der die Nachricht signiert wurde (z.B. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -1564,8 +1564,8 @@ Adresse: %4</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Fenixcoin-Adresse eingeben (z.B. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>Enter a Fenixcoin address (e.g. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</source>
+        <translation>Fenixcoin-Adresse eingeben (z.B. FnX2017rhHNEfwT2BmGX1T4lP01NpRUE1K12k32)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2236,8 +2236,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="-28"/>
-        <source>Listen for connections on &lt;port&gt; (default: 19390 or testnet: 19391)</source>
-        <translation>&lt;port&gt; nach Verbindungen abhören (Standard: 19390 oder Testnetz: 19391)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 33206 or testnet: 16412)</source>
+        <translation>&lt;port&gt; nach Verbindungen abhören (Standard: 33206 oder Testnetz: 16412)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2271,8 +2271,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="+27"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 19380 or testnet: 19388)</source>
-        <translation>&lt;port&gt; nach JSON-RPC-Verbindungen abhören (Standard: 19380 oder Testnetz: 19388)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 32107 or testnet: 56261)</source>
+        <translation>&lt;port&gt; nach JSON-RPC-Verbindungen abhören (Standard: 32107 oder Testnetz: 56261)</translation>
     </message>
     <message>
         <location line="+37"/>

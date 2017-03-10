@@ -35,7 +35,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0xdf3c3006a9d7998390e4523dfd13b3fcda714a08bcd6176fd50b40c9ceb80067");
+uint256 hashGenesisBlock("0xf0e8131061453bfa12ad3930a724bac73e8be7879b168aac5b6f1fbfc202c35c");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Fenixcoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -1097,15 +1097,14 @@ int64 static GetBlockValue(int nHeight, int64 nFees){
 }
 
 static const int64 nTargetTimespan = 3 * 24 * 60 * 60; // Fenixcoin retarget dificult: 3 days
-static const int64 nTargetSpacing = 3 * 60; // Fenixcoin emission block: 2:30 minutes
+static const int64 nTargetSpacing = 5 * 60; // Fenixcoin emission block: 3 minutes
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 //
 // minimum amount of work that could possibly be required nTime after
 // minimum work required was nBase
 //
-unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
-{
+unsigned int ComputeMinWork(unsigned int nBase, int64 nTime){
     // Testnet has min-difficulty blocks
     // after nTargetSpacing*2 time between blocks:
     if (fTestNet && nTime > nTargetSpacing*2)
@@ -1113,8 +1112,7 @@ unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
 
     CBigNum bnResult;
     bnResult.SetCompact(nBase);
-    while (nTime > 0 && bnResult < bnProofOfWorkLimit)
-    {
+    while (nTime > 0 && bnResult < bnProofOfWorkLimit){
         // Maximum 400% adjustment...
         bnResult *= 4;
         // ... in best-case exactly 4-times-normal target time
@@ -1125,8 +1123,7 @@ unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
     return bnResult.GetCompact();
 }
 
-unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
-{
+unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock){
     unsigned int nProofOfWorkLimit = bnProofOfWorkLimit.GetCompact();
 
     // Genesis block
@@ -1134,17 +1131,14 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
         return nProofOfWorkLimit;
 
     // Only change once per interval
-    if ((pindexLast->nHeight+1) % nInterval != 0)
-    {
+    if ((pindexLast->nHeight+1) % nInterval != 0){
         // Special difficulty rule for testnet:
-        if (fTestNet)
-        {
+        if (fTestNet){
             // If the new block's timestamp is more than 2* 10 minutes
             // then allow mining of a min-difficulty block.
             if (pblock->nTime > pindexLast->nTime + nTargetSpacing*2)
                 return nProofOfWorkLimit;
-            else
-            {
+            else{
                 // Return the last non-special-min-difficulty-rules-block
                 const CBlockIndex* pindex = pindexLast;
                 while (pindex->pprev && pindex->nHeight % nInterval != 0 && pindex->nBits == nProofOfWorkLimit)
@@ -2739,15 +2733,13 @@ void UnloadBlockIndex()
     pindexBest = NULL;
 }
 
-bool LoadBlockIndex()
-{
-    if (fTestNet)
-    {
-        pchMessageStart[0] = 0xf0;
-        pchMessageStart[1] = 0xf1;
-        pchMessageStart[2] = 0xb2;
-        pchMessageStart[3] = 0xb3;
-        hashGenesisBlock = uint256("0xdf3c3006a9d7998390e4523dfd13b3fcda714a08bcd6176fd50b40c9ceb80067");
+bool LoadBlockIndex(){
+    if (fTestNet){
+        pchMessageStart[0] = 0xa0;
+        pchMessageStart[1] = 0xb1;
+        pchMessageStart[2] = 0xc2;
+        pchMessageStart[3] = 0xd3;
+        hashGenesisBlock = uint256("0x");
     }
 
     //
@@ -2780,26 +2772,25 @@ bool InitBlockIndex() {
         //   vMerkleTree: 97ddfbbae6
 
         // Genesis block
-        const char* pszTimestamp = "Eu sei que o Mike é um Malakoi";
+        const char* pszTimestamp = "The New York Times 09/Mac/2017 Is Trump Being Investigated? ‘No Comment,’ Justice Dept. Says";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 50 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("D1D2AFAD3D894BC527F8274E77A125907770F5E361B27D8BDC62FA24841F524858E9E79FCEFF8D6BC26FFE4A40FA13E28C516647218EF972323B516502766994CD") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("0203AFADED844B3527F81743174125907130F5E361B27D89DA62FB24841F524858E9379FCEFF8D6BC26FFE4A40F413E28C5366472183F932623B5165D2766B24CD") << OP_CHECKSIG;
         CBlock block;
         block.vtx.push_back(txNew);
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1489041642;
+        block.nTime    = 1489049414;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 684709;
+        block.nNonce   = 24962;
 
-        if (fTestNet)
-        {
-            block.nTime    = 1489041642;
-            block.nNonce   = 684709;
+        if (fTestNet){
+            block.nTime    = 1489049414;
+            block.nNonce   = 0;
         }
 
         //// debug print
@@ -2807,7 +2798,7 @@ bool InitBlockIndex() {
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x14e9522bf7c265e7af40b29c552e2e60765a4cc0c232beec4508a9acddb69af0"));
+        assert(block.hashMerkleRoot == uint256("0xde0a5d7d51930e3de428b01962377bbfec82b6b7ae1d64b1f1265c22a8019a91"));
 
         if (true && block.GetHash() != hashGenesisBlock){
             printf("Searching for genesis block...\n");
@@ -3107,7 +3098,7 @@ bool static AlreadyHave(const CInv& inv)
 // The message start string is designed to be unlikely to occur in normal data.
 // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 // a large 4-byte int at any alignment.
-unsigned char pchMessageStart[4] = { 0xf1, 0xf0, 0xf6, 0xdb }; // Fenixcoin: increase each by adding 2 to bitcoin's value.
+unsigned char pchMessageStart[4] = { 0xa1, 0xb2, 0xc6, 0xdb }; // Fenixcoin: increase each by adding 2 to bitcoin's value.
 
 
 void static ProcessGetData(CNode* pfrom)

@@ -35,7 +35,7 @@ script: |
   #
   tar xzf miniupnpc-1.9.20140401.tar.gz
   cd miniupnpc-1.9.20140401
-  INSFNXLPREFIX=$INSTDIR make $MAKEOPTS install
+  INSTALLPREFIX=$INSTDIR make $MAKEOPTS install
   cd ..
   #
   tar xjf qrencode-3.4.3.tar.bz2
