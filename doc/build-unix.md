@@ -12,7 +12,7 @@ To Build
 ---------------------
 
 	cd src/
-	make -f makefile.unix		# Headless fenixcoin
+	make -f makefile.unix		# Headless Fenixcoin
 
 See readme-qt.rst for instructions on building Fenixcoin-Qt, the graphical user interface.
 
@@ -113,7 +113,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your fenixcoin installation more secure by making certain attacks impossible to
+To help make your Fenixcoin installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, you can take the following measures:
 
 * Position Independent Executable
@@ -131,7 +131,7 @@ exploit even if a vulnerability is found, you can take the following measures:
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
-    	scanelf -e ./fenixcoin
+    	scanelf -e ./Fenixcoin
 
     The output should contain:
      TYPE
@@ -145,7 +145,7 @@ exploit even if a vulnerability is found, you can take the following measures:
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    `scanelf -e ./fenixcoin`
+    `scanelf -e ./Fenixcoin`
 
     the output should contain:
 	STK/REL/PTL

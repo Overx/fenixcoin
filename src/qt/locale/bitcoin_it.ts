@@ -248,8 +248,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
-        <translation>Attenzione: se si cifra il portamonete e si perde la frase d&apos;ordine, &lt;b&gt;SI PERDERANNO TUTTI I PROPRI LITECOIN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FenixcoinS&lt;/b&gt;!</source>
+        <translation>Attenzione: se si cifra il portamonete e si perde la frase d&apos;ordine, &lt;b&gt;SI PERDERANNO TUTTI I PROPRI Fenixcoin&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -275,7 +275,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="-56"/>
-        <source>Fenixcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your fenixcoins from being stolen by malware infecting your computer.</source>
+        <source>Fenixcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Fenixcoins from being stolen by malware infecting your computer.</source>
         <translation>Fenixcoin verrà ora chiuso per finire il processo di crittazione. Ricorda che criptare il tuo portamonete non può fornire una protezione totale contro furti causati da malware che dovessero infettare il tuo computer.</translation>
     </message>
     <message>
@@ -354,7 +354,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="+7"/>
-        <source>Edit the list of stored addresses and labels</source>
+        <source>Edit the list of stored addresses and labels for sending</source>
         <translation>Modifica la lista degli indirizzi salvati e delle etichette</translation>
     </message>
     <message>
@@ -420,12 +420,12 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     <message>
         <location line="-347"/>
         <source>Send coins to a Fenixcoin address</source>
-        <translation>Invia monete ad un indirizzo fenixcoin</translation>
+        <translation>Invia monete ad un indirizzo Fenixcoin</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Modify configuration options for Fenixcoin</source>
-        <translation>Modifica configurazione opzioni per fenixcoin</translation>
+        <translation>Modifica configurazione opzioni per Fenixcoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -739,7 +739,7 @@ Indirizzo: %4
     <message>
         <location line="-5"/>
         <source>The entered address &quot;%1&quot; is not a valid Fenixcoin address.</source>
-        <translation>L&apos;indirizzo inserito &quot;%1&quot; non è un indirizzo fenixcoin valido.</translation>
+        <translation>L&apos;indirizzo inserito &quot;%1&quot; non è un indirizzo Fenixcoin valido.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1071,7 +1071,7 @@ Indirizzo: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start fenixcoin: click-to-pay handler</source>
+        <source>Cannot start Fenixcoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1342,7 +1342,7 @@ Indirizzo: %4
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>Conferma la spedizione di fenixcoin</translation>
+        <translation>Conferma la spedizione di Fenixcoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1387,7 +1387,7 @@ Indirizzo: %4
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcuni fenixcoin nel portamonete sono stati già spesi, ad esempio se è stata usata una copia del file wallet.dat e i fenixcoin sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
+        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcuni Fenixcoin nel portamonete sono stati già spesi, ad esempio se è stata usata una copia del file wallet.dat e i Fenixcoin sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
     </message>
 </context>
 <context>
@@ -1409,8 +1409,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>L&apos;indirizzo del beneficiario a cui inviare il pagamento (ad esempio TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address to send the payment to (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>L&apos;indirizzo del beneficiario a cui inviare il pagamento (ad esempio Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1450,8 +1450,8 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Inserisci un indirizzo Fenixcoin (ad esempio TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>Enter a Fenixcoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Inserisci un indirizzo Fenixcoin (ad esempio Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
 </context>
 <context>
@@ -1473,8 +1473,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Inserisci un indirizzo Fenixcoin (ad esempio TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address to sign the message with (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Inserisci un indirizzo Fenixcoin (ad esempio Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1546,8 +1546,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Inserisci un indirizzo Fenixcoin (ad esempio TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address the message was signed with (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Inserisci un indirizzo Fenixcoin (ad esempio Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -1567,8 +1567,8 @@ Indirizzo: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Inserisci un indirizzo Fenixcoin (ad esempio TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>Enter a Fenixcoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Inserisci un indirizzo Fenixcoin (ad esempio Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1598,7 +1598,7 @@ Indirizzo: %4
         <location line="-81"/>
         <location line="+81"/>
         <source>The entered address does not refer to a key.</source>
-        <translation>L&apos;indirizzo fenixcoin inserito non è associato a nessuna chiave.</translation>
+        <translation>L&apos;indirizzo Fenixcoin inserito non è associato a nessuna chiave.</translation>
     </message>
     <message>
         <location line="-73"/>
@@ -1786,7 +1786,7 @@ Indirizzo: %4
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Bisogna attendere 120 blocchi prima di spendere I fenixcoin generati. Quando è stato generato questo blocco, è stato trasmesso alla rete per aggiungerlo alla catena di blocchi. Se non riesce a entrare nella catena, verrà modificato in &quot;non accettato&quot; e non sarà spendibile. Questo può accadere a volte, se un altro nodo genera un blocco entro pochi secondi del tuo.</translation>
+        <translation>Bisogna attendere 120 blocchi prima di spendere I Fenixcoin generati. Quando è stato generato questo blocco, è stato trasmesso alla rete per aggiungerlo alla catena di blocchi. Se non riesce a entrare nella catena, verrà modificato in &quot;non accettato&quot; e non sarà spendibile. Questo può accadere a volte, se un altro nodo genera un blocco entro pochi secondi del tuo.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2199,8 +2199,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or fenixcoind</source>
-        <translation>Manda il comando a -server o fenixcoind
+        <source>Send command to -server or Fenixcoind</source>
+        <translation>Manda il comando a -server o Fenixcoind
 </translation>
     </message>
     <message>
@@ -2223,14 +2223,14 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: fenixcoin.conf)</source>
-        <translation>Specifica il file di configurazione (di default: fenixcoin.conf)
+        <source>Specify configuration file (default: Fenixcoin.conf)</source>
+        <translation>Specifica il file di configurazione (di default: Fenixcoin.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: fenixcoind.pid)</source>
-        <translation>Specifica il file pid (default: fenixcoind.pid)
+        <source>Specify pid file (default: Fenixcoind.pid)</source>
+        <translation>Specifica il file pid (default: Fenixcoind.pid)
 </translation>
     </message>
     <message>
@@ -2246,8 +2246,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="-28"/>
-        <source>Listen for connections on &lt;port&gt; (default: 19390 or testnet: 19391)</source>
-        <translation>Ascolta le connessioni JSON-RPC su &lt;porta&gt; (default: 19390 o testnet: 19391)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 22556 or testnet: 44556)</source>
+        <translation>Ascolta le connessioni JSON-RPC su &lt;porta&gt; (default: 22556 o testnet: 44556)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2281,8 +2281,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+27"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 19380 or testnet: 19388)</source>
-        <translation>Attendi le connessioni JSON-RPC su &lt;porta&gt; (default: 19380 or testnet: 19388)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 22555 or testnet: 44555)</source>
+        <translation>Attendi le connessioni JSON-RPC su &lt;porta&gt; (default: 22555 or testnet: 44555)</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -2312,7 +2312,7 @@ Indirizzo: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=fenixcoinrpc
+rpcuser=Fenixcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2340,7 +2340,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Fenixcoin Alert&quot; admin@fo
     <message>
         <location line="+3"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcuni fenixcoin nel portamonete sono stati già spesi, ad esempio se è stata usata una copia del file wallet.dat e i fenixcoin sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
+        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcuni Fenixcoin nel portamonete sono stati già spesi, ad esempio se è stata usata una copia del file wallet.dat e i Fenixcoin sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2500,7 +2500,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Fenixcoin Alert&quot; admin@fo
     <message>
         <location line="+1"/>
         <source>Failed to write to coin database</source>
-        <translation>Scrittura nel database dei fenixcoin fallita</translation>
+        <translation>Scrittura nel database dei Fenixcoin fallita</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2624,7 +2624,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Fenixcoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+2"/>
-        <source>Prepend debug output with timestamp</source>
+        <source>Prepend debug output with timestamp (default: 1)</source>
         <translation>Anteponi all&apos;output di debug una marca temporale</translation>
     </message>
     <message>

@@ -1,5 +1,5 @@
 IDI_ICON1 ICON DISCARDABLE "icons/bitcoin.ico"
-IDI_ICON2 ICON DISCARDABLE "icons/bitcoin_testnet.ico"
+IDI_ICON2 ICON DISCARDABLE "icons/bitcoin.ico"
 
 #include <windows.h>             // needed for VERSIONINFO
 #include "../../clientversion.h" // holds the needed client version information
@@ -23,10 +23,10 @@ BEGIN
             VALUE "CompanyName",        "Fenixcoin"
             VALUE "FileDescription",    "Fenixcoin-Qt (OSS GUI client for Fenixcoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "fenixcoin-qt"
+            VALUE "InternalName",       "Fenixcoin-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "fenixcoin-qt.exe"
+            VALUE "OriginalFilename",   "Fenixcoin-qt.exe"
             VALUE "ProductName",        "Fenixcoin-Qt"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END

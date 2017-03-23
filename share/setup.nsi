@@ -5,9 +5,9 @@ SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 0.8.7.5
+!define VERSION 0.8.6.1
 !define COMPANY "Fenixcoin project"
-!define URL http://www.fenixcoin.org/
+!define URL http://www.Fenixcoin.org/
 
 # MUI Symbol Definitions
 !define MUI_ICON "../share/pixmaps/bitcoin.ico"
@@ -20,7 +20,7 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER Fenixcoin
-!define MUI_FINISHPAGE_RUN $INSTDIR\fenixcoin-qt.exe
+!define MUI_FINISHPAGE_RUN $INSTDIR\Fenixcoin-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -45,13 +45,13 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile fenixcoin-${VERSION}-win32-setup.exe
+OutFile Fenixcoin-0.8.6.1-win32-setup.exe
 InstallDir $PROGRAMFILES\Fenixcoin
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
-VIProductVersion ${VERSION}
+VIProductVersion 0.8.6.1
 VIAddVersionKey ProductName Fenixcoin
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
@@ -66,18 +66,18 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File ../release/fenixcoin-qt.exe
+    File ../release/Fenixcoin-qt.exe
     File /oname=COPYING.txt ../COPYING
     File /oname=readme.txt ../doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File ../src/fenixcoind.exe
+    File ../src/Fenixcoind.exe
     SetOutPath $INSTDIR\src
     File /r /x *.exe /x *.o ../src\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
     # Remove old wxwidgets-based-bitcoin executable and locales:
-    Delete /REBOOTOK $INSTDIR\fenixcoin.exe
+    Delete /REBOOTOK $INSTDIR\Fenixcoin.exe
     RMDir /r /REBOOTOK $INSTDIR\locale
 SectionEnd
 
@@ -87,7 +87,7 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Fenixcoin.lnk" $INSTDIR\fenixcoin-qt.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Fenixcoin.lnk" $INSTDIR\Fenixcoin-qt.exe
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall Fenixcoin.lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
@@ -98,10 +98,10 @@ Section -post SEC0001
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" UninstallString $INSTDIR\uninstall.exe
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
-    WriteRegStr HKCR "fenixcoin" "URL Protocol" ""
-    WriteRegStr HKCR "fenixcoin" "" "URL:Fenixcoin"
-    WriteRegStr HKCR "fenixcoin\DefaultIcon" "" $INSTDIR\fenixcoin-qt.exe
-    WriteRegStr HKCR "fenixcoin\shell\open\command" "" '"$INSTDIR\fenixcoin-qt.exe" "%1"'
+    WriteRegStr HKCR "Fenixcoin" "URL Protocol" ""
+    WriteRegStr HKCR "Fenixcoin" "" "URL:Fenixcoin"
+    WriteRegStr HKCR "Fenixcoin\DefaultIcon" "" $INSTDIR\Fenixcoin-qt.exe
+    WriteRegStr HKCR "Fenixcoin\shell\open\command" "" '"$INSTDIR\Fenixcoin-qt.exe" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -119,7 +119,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\fenixcoin-qt.exe
+    Delete /REBOOTOK $INSTDIR\Fenixcoin-qt.exe
     Delete /REBOOTOK $INSTDIR\COPYING.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -139,7 +139,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "fenixcoin"
+    DeleteRegKey HKCR "Fenixcoin"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0

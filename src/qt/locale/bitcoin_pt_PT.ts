@@ -248,8 +248,8 @@ Este produto inclui software desenvolvido pelo Projecto OpenSSL para uso no Open
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
-        <translation>Atenção: Se encriptar a carteira e perder a sua senha irá &lt;b&gt;PERDER TODOS OS SEUS LITECOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FenixcoinS&lt;/b&gt;!</source>
+        <translation>Atenção: Se encriptar a carteira e perder a sua senha irá &lt;b&gt;PERDER TODOS OS SEUS FenixcoinS&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -275,8 +275,8 @@ Este produto inclui software desenvolvido pelo Projecto OpenSSL para uso no Open
     </message>
     <message>
         <location line="-56"/>
-        <source>Fenixcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your fenixcoins from being stolen by malware infecting your computer.</source>
-        <translation>O cliente Fenixcoin irá agora ser fechado para terminar o processo de encriptação. Recorde que a encriptação da sua carteira não protegerá totalmente os seus fenixcoins de serem roubados por programas maliciosos que infectem o seu computador.</translation>
+        <source>Fenixcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Fenixcoins from being stolen by malware infecting your computer.</source>
+        <translation>O cliente Fenixcoin irá agora ser fechado para terminar o processo de encriptação. Recorde que a encriptação da sua carteira não protegerá totalmente os seus Fenixcoins de serem roubados por programas maliciosos que infectem o seu computador.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -354,7 +354,7 @@ Este produto inclui software desenvolvido pelo Projecto OpenSSL para uso no Open
     </message>
     <message>
         <location line="+7"/>
-        <source>Edit the list of stored addresses and labels</source>
+        <source>Edit the list of stored addresses and labels for sending</source>
         <translation>Editar a lista de endereços e rótulos</translation>
     </message>
     <message>
@@ -420,12 +420,12 @@ Este produto inclui software desenvolvido pelo Projecto OpenSSL para uso no Open
     <message>
         <location line="-347"/>
         <source>Send coins to a Fenixcoin address</source>
-        <translation>Enviar moedas para um endereço fenixcoin</translation>
+        <translation>Enviar moedas para um endereço Fenixcoin</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Modify configuration options for Fenixcoin</source>
-        <translation>Modificar opções de configuração para fenixcoin</translation>
+        <translation>Modificar opções de configuração para Fenixcoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -738,7 +738,7 @@ Endereço: %4
     <message>
         <location line="-5"/>
         <source>The entered address &quot;%1&quot; is not a valid Fenixcoin address.</source>
-        <translation>O endereço introduzido &quot;%1&quot; não é um endereço fenixcoin válido.</translation>
+        <translation>O endereço introduzido &quot;%1&quot; não é um endereço Fenixcoin válido.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -845,7 +845,7 @@ Endereço: %4
     <message>
         <location line="+6"/>
         <source>Automatically open the Fenixcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir a porta do cliente fenixcoin automaticamente no seu router. Isto penas funciona se o seu router suportar UPnP e este se encontrar ligado.</translation>
+        <translation>Abrir a porta do cliente Fenixcoin automaticamente no seu router. Isto penas funciona se o seu router suportar UPnP e este se encontrar ligado.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1069,8 +1069,8 @@ Endereço: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start fenixcoin: click-to-pay handler</source>
-        <translation>Impossível começar o modo clicar-para-pagar com fenixcoin:</translation>
+        <source>Cannot start Fenixcoin: click-to-pay handler</source>
+        <translation>Impossível começar o modo clicar-para-pagar com Fenixcoin:</translation>
     </message>
 </context>
 <context>
@@ -1407,8 +1407,8 @@ Endereço: %4
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>O endereço para onde enviar o pagamento  (p.ex. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address to send the payment to (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>O endereço para onde enviar o pagamento  (p.ex. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1448,8 +1448,8 @@ Endereço: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Introduza um endereço Fenixcoin (p.ex. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>Enter a Fenixcoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Introduza um endereço Fenixcoin (p.ex. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
 </context>
 <context>
@@ -1471,8 +1471,8 @@ Endereço: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>O endereço a utilizar para assinar a mensagem (p.ex. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address to sign the message with (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>O endereço a utilizar para assinar a mensagem (p.ex. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1544,8 +1544,8 @@ Endereço: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>O endereço utilizado para assinar a mensagem (p.ex. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>The address the message was signed with (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>O endereço utilizado para assinar a mensagem (p.ex. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -1565,8 +1565,8 @@ Endereço: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Fenixcoin address (e.g. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</source>
-        <translation>Introduza um endereço Fenixcoin (p.ex. TAlWhHNAEfwTaBmGXcTAlPo1NpRUEiK18km2)</translation>
+        <source>Enter a Fenixcoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Introduza um endereço Fenixcoin (p.ex. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2197,8 +2197,8 @@ Endereço: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or fenixcoind</source>
-        <translation>Enviar comando para -server ou fenixcoind</translation>
+        <source>Send command to -server or Fenixcoind</source>
+        <translation>Enviar comando para -server ou Fenixcoind</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2217,13 +2217,13 @@ Endereço: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: fenixcoin.conf)</source>
-        <translation>Especificar ficheiro de configuração (por defeito: fenixcoin.conf)</translation>
+        <source>Specify configuration file (default: Fenixcoin.conf)</source>
+        <translation>Especificar ficheiro de configuração (por defeito: Fenixcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: fenixcoind.pid)</source>
-        <translation>Especificar ficheiro pid (por defeito: fenixcoind.pid)</translation>
+        <source>Specify pid file (default: Fenixcoind.pid)</source>
+        <translation>Especificar ficheiro pid (por defeito: Fenixcoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2237,8 +2237,8 @@ Endereço: %4
     </message>
     <message>
         <location line="-28"/>
-        <source>Listen for connections on &lt;port&gt; (default: 19390 or testnet: 19391)</source>
-        <translation>Escute por ligações em &lt;port&gt; (por defeito: 19390 ou testnet: 19391)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 22556 or testnet: 44556)</source>
+        <translation>Escute por ligações em &lt;port&gt; (por defeito: 22556 ou testnet: 44556)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2272,8 +2272,8 @@ Endereço: %4
     </message>
     <message>
         <location line="+27"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 19380 or testnet: 19388)</source>
-        <translation>Escutar por ligações JSON-RPC em &lt;port&gt; (por defeito: 19380 ou rede de testes: 19388)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 22555 or testnet: 44555)</source>
+        <translation>Escutar por ligações JSON-RPC em &lt;port&gt; (por defeito: 22555 ou rede de testes: 44555)</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -2300,7 +2300,7 @@ Endereço: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=fenixcoinrpc
+rpcuser=Fenixcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2311,7 +2311,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Fenixcoin Alert&quot; admin@fo
         <translation>%s, deverá definir rpcpassword no ficheiro de configuração :
  %s
 É recomendado que use a seguinte palavra-passe aleatória:
-rpcuser=fenixcoinrpc
+rpcuser=Fenixcoinrpc
 rpcpassword=%s
 (não precisa recordar esta palavra-passe)
 O nome de utilizador e password NÃO DEVEM ser iguais.
@@ -2622,7 +2622,7 @@ por exemplo: alertnotify=echo %%s | mail -s &quot;Alerta Fenixcoin&quot; admin@f
     </message>
     <message>
         <location line="+2"/>
-        <source>Prepend debug output with timestamp</source>
+        <source>Prepend debug output with timestamp (default: 1)</source>
         <translation>Preceder informação de depuração com selo temporal</translation>
     </message>
     <message>

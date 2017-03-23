@@ -4,6 +4,6 @@ See doc/readme-qt.rst for instructions on building Fenixcoin-Qt,
 the intended-for-end-users, nice-graphical-interface, reference
 implementation of Fenixcoin.
 
-See doc/build-*.txt for instructions on building fenixcoind,
+See doc/build-*.txt for instructions on building Fenixcoind,
 the intended-for-services, no-graphical-interface, reference
 implementation of Fenixcoin.

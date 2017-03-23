@@ -1,4 +1,4 @@
-// Copyright (c) 2009-2014 Bitcoin Developers
+// Copyright (c) 2009-2012 Bitcoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -36,10 +36,8 @@ Value importprivkey(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 3)
         throw runtime_error(
-            "importprivkey <fenixcoinprivkey> [label] [rescan=true]\n"
+            "importprivkey <Fenixcoinprivkey> [label] [rescan=true]\n"
             "Adds a private key (as returned by dumpprivkey) to your wallet.");
-
-    EnsureWalletIsUnlocked();
 
     string strSecret = params[0].get_str();
     string strLabel = "";
@@ -54,13 +52,11 @@ Value importprivkey(const Array& params, bool fHelp)
     CBitcoinSecret vchSecret;
     bool fGood = vchSecret.SetString(strSecret);
 
-    if (!fGood) throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid private key encoding");
+    if (!fGood) throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid private key");
 
     CKey key = vchSecret.GetKey();
     CPubKey pubkey = key.GetPubKey();
     CKeyID vchAddress = pubkey.GetID();
-    if (!key.IsValid()) throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Private key outside allowed range");
-
     {
         LOCK2(cs_main, pwalletMain->cs_wallet);
 
@@ -83,8 +79,8 @@ Value dumpprivkey(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "dumpprivkey <fenixcoinaddress>\n"
-            "Reveals the private key corresponding to <fenixcoinaddress>.");
+            "dumpprivkey <Fenixcoinaddress>\n"
+            "Reveals the private key corresponding to <Fenixcoinaddress>.");
 
     string strAddress = params[0].get_str();
     CBitcoinAddress address;

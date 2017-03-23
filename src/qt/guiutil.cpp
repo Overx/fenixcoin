@@ -1,7 +1,3 @@
-// Copyright (c) 2011-2014 The Bitcoin developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
 #include <QApplication>
 
 #include "guiutil.h"
@@ -88,7 +84,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no bitcoin URI
-    if(!uri.isValid() || uri.scheme() != QString("fenixcoin"))
+    if(!uri.isValid() || uri.scheme() != QString("Fenixcoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -143,9 +139,9 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("fenixcoin://"))
+    if(uri.startsWith("Fenixcoin://"))
     {
-        uri.replace(0, 11, "fenixcoin:");
+        uri.replace(0, 11, "Fenixcoin:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -290,11 +286,11 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
     {
         QWidget *widget = static_cast<QWidget*>(obj);
         QString tooltip = widget->toolTip();
-        if(tooltip.size() > size_threshold && !tooltip.startsWith("<qt") && !Qt::mightBeRichText(tooltip))
+        if(tooltip.size() > size_threshold && !tooltip.startsWith("<qt/>") && !Qt::mightBeRichText(tooltip))
         {
-            // Envelop with <qt></qt> to make sure Qt detects this as rich text
+            // Prefix <qt/> to make sure Qt detects this as rich text
             // Escape the current message as HTML and replace \n by <br>
-            tooltip = "<qt>" + HtmlEscape(tooltip, true) + "</qt>";
+            tooltip = "<qt/>" + HtmlEscape(tooltip, true);
             widget->setToolTip(tooltip);
             return true;
         }
@@ -387,7 +383,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "fenixcoin.desktop";
+    return GetAutostartDir() / "Fenixcoin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -502,7 +498,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
     header = tr("Fenixcoin-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  fenixcoin-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  Fenixcoin-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 

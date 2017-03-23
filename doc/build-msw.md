@@ -63,7 +63,7 @@ MSYS shell:
 
 Boost
 -----
-MSYS shell:
+DOS prompt:
 
 	downloaded boost jam 3.1.18
 	cd \boost-1.50.0-mgw
@@ -82,8 +82,8 @@ MSYS shell:
 
 Fenixcoin
 -------
-MSYS shell:
+DOS prompt:
 
-	cd \fenixcoin\src
+	cd \Fenixcoin\src
 	mingw32-make -f makefile.mingw
-	strip fenixcoind.exe
+	strip Fenixcoind.exe

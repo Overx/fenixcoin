@@ -21,6 +21,7 @@ namespace Checkpoints
     // fast multicore CPU, it won't be much higher than 1.
     static const double fSigcheckVerificationFactor = 5.0;
 
+
     struct CCheckpointData {
         const MapCheckpoints *mapCheckpoints;
         int64 nTimeLastCheckpoint;
@@ -32,28 +33,29 @@ namespace Checkpoints
     // + Is surrounded by blocks with reasonable timestamps
     //   (no blocks before with a timestamp after, none after with
     //    timestamp before)
-    // + Contains no strange transactions
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        (  0, uint256("0xdf3c3006a9d7998390e4523dfd13b3fcda714a08bcd6176fd50b40c9ceb80067"))
-        ;
+               ( 0, uint256("0x5c048d35b4a8c139a4cede17e9037f1401f99093999539f9bf3ee6c2770c2f55"))
+			   ( 1, uint256("0x9bd16ceb6aa2ffecaf9cea9b02118c30cba85b78c63504e4e242b4a2c0587907"))
+			//   ( 2, uint256("0x5c048d35b4a8c139a4cede17e9037f1401f99093999539f9bf3ee6c2770c2f55"))
+	;
     static const CCheckpointData data = {
         &mapCheckpoints,
-        //1485207359, // * UNIX timestamp of last checkpoint block
-        //2,    // * total number of transactions between genesis and last checkpoint
+        1388880557, // * UNIX timestamp of last checkpoint block
+        0,    // * total number of transactions between genesis and last checkpoint
                     //   (the tx=... number in the SetBestChain debug.log lines)
-        //7000.0     // * estimated number of transactions per day after checkpoint
+        8000.0     // * estimated number of transactions per day after checkpoint
     };
 
-    static MapCheckpoints mapCheckpointsTestnet =
+    static MapCheckpoints mapCheckpointsTestnet = 
         boost::assign::map_list_of
-        ( 0, uint256("0x"))
+        (     0, uint256("0x"))
         ;
     static const CCheckpointData dataTestnet = {
         &mapCheckpointsTestnet,
-        //1365458829,
-        //547,
-        //576
+        1369685559,
+        37581,
+        300
     };
 
     const CCheckpointData &Checkpoints() {
@@ -65,6 +67,7 @@ namespace Checkpoints
 
     bool CheckBlock(int nHeight, const uint256& hash)
     {
+        if (fTestNet) return true; // Testnet has no checkpoints
         if (!GetBoolArg("-checkpoints", true))
             return true;
 
@@ -108,6 +111,7 @@ namespace Checkpoints
 
     int GetTotalBlocksEstimate()
     {
+        if (fTestNet) return 0; // Testnet has no checkpoints
         if (!GetBoolArg("-checkpoints", true))
             return 0;
 
@@ -118,6 +122,7 @@ namespace Checkpoints
 
     CBlockIndex* GetLastCheckpoint(const std::map<uint256, CBlockIndex*>& mapBlockIndex)
     {
+        if (fTestNet) return NULL; // Testnet has no checkpoints
         if (!GetBoolArg("-checkpoints", true))
             return NULL;
 

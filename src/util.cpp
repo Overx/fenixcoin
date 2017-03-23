@@ -13,6 +13,8 @@
 #include <sys/resource.h>
 #endif
 
+// added stuff for gravity update
+
 #include "util.h"
 #include "sync.h"
 #include "version.h"
@@ -995,7 +997,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "fenixcoin";
+    const char* pszModule = "Fenixcoin";
 #endif
     if (pex)
         return strprintf(
@@ -1052,7 +1054,7 @@ boost::filesystem::path GetDefaultDataDir()
     return pathRet / "Fenixcoin";
 #else
     // Unix
-    return pathRet / ".fenixcoin";
+    return pathRet / ".Fenixcoin";
 #endif
 #endif
 }
@@ -1093,7 +1095,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "fenixcoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "Fenixcoin.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1127,7 +1129,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "fenixcoind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "Fenixcoind.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1336,7 +1338,7 @@ void AddTimeData(const CNetAddr& ip, int64 nTime)
         int64 nMedian = vTimeOffsets.median();
         std::vector<int64> vSorted = vTimeOffsets.sorted();
         // Only let other nodes change our time by so much
-        if (abs64(nMedian) < 35 * 60) // Fenixcoin: changed maximum adjust to 35 mins to avoid letting peers change our time too much in case of an attack.
+        if (abs64(nMedian) < 15 * 60) // Fenixcoin: changed maximum adjust to 15 mins to avoid letting peers change our time too much in case of an attack.
         {
             nTimeOffset = nMedian;
         }
@@ -1391,6 +1393,48 @@ void seed_insecure_rand(bool fDeterministic)
         } while(tmp == 0 || tmp == 0x464fffffU);
         insecure_rand_Rw = tmp;
     }
+}
+
+static const long hextable[] =
+{
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,         // 10-19
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,         // 30-39
+    -1, -1, -1, -1, -1, -1, -1, -1,  0,  1,
+     2,  3,  4,  5,  6,  7,  8,  9, -1, -1,         // 50-59
+    -1, -1, -1, -1, -1, 10, 11, 12, 13, 14,
+    15, -1, -1, -1, -1, -1, -1, -1, -1, -1,         // 70-79
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, 10, 11, 12,         // 90-99
+    13, 14, 15, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,         // 110-109
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,         // 130-139
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,         // 150-159
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,         // 170-179
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,         // 190-199
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,         // 210-219
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,         // 230-239
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1
+};
+
+long hex2long(const char* hexString)
+{
+    long ret = 0;
+
+    while (*hexString && ret >= 0)
+    {
+        ret = (ret << 4) | hextable[*hexString++];
+    }
+
+    return ret;
 }
 
 string FormatVersion(int nVersion)
@@ -1498,4 +1542,23 @@ bool NewThread(void(*pfn)(void*), void* parg)
         return false;
     }
     return true;
+}
+// for the difficulty update in GetNextWorkRequired
+void DoubleToNumeratorDenominator(double inDouble, long long *outNumerator, long long *outDenominator)
+{
+    double fPart;
+    int expo; // exponent
+    long long lExpo;
+    int i;
+
+    fPart = frexp(inDouble, &expo);
+    for (i=0; i<300 && fPart != floor(fPart) ; i++) { fPart *= 2.0; expo--; }
+
+    *outNumerator = (long long) fPart;
+    lExpo = 1LL << labs((long) expo);
+    if (expo > 0) {
+        *outNumerator *= lExpo;
+        *outDenominator = 1;
+    }
+	else { *outDenominator = lExpo; }
 }

@@ -95,7 +95,7 @@ LIBS+= \
 
     # -D_FORTIFY_SOURCE=2 does some checking for potentially exploitable code patterns in
     # the source such overflowing a statically defined buffer.
-    HARDENING+=-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
+    HARDENING+=-D_FORTIFY_SOURCE=2
 #
 
 
@@ -121,6 +121,7 @@ OBJS= \
     obj/key.o \
     obj/db.o \
     obj/init.o \
+    obj/irc.o \
     obj/keystore.o \
     obj/main.o \
     obj/net.o \
@@ -151,10 +152,10 @@ OBJS_SSE2= obj/scrypt-sse2.o
 OBJS += $(OBJS_SSE2)
 endif
 
-all: fenixcoind
+all: Fenixcoind
 
-test check: test_fenixcoin FORCE
-	./test_fenixcoin
+test check: test_Fenixcoin FORCE
+	./test_Fenixcoin
 
 #
 # LevelDB support
@@ -189,7 +190,7 @@ obj/%.o: %.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-fenixcoind: $(OBJS:obj/%=obj/%)
+Fenixcoind: $(OBJS:obj/%=obj/%)
 	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -201,11 +202,11 @@ obj-test/%.o: test/%.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-test_fenixcoin: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_Fenixcoin: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(LINK) $(xCXXFLAGS) -o $@ $(LIBPATHS) $^ $(TESTLIBS) $(xLDFLAGS) $(LIBS)
 
 clean:
-	-rm -f fenixcoind test_fenixcoin
+	-rm -f Fenixcoind test_Fenixcoin
 	-rm -f obj/*.o
 	-rm -f obj-test/*.o
 	-rm -f obj/*.P

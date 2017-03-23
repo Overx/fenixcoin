@@ -18,7 +18,7 @@ for Debian and Ubuntu  <= 11.10 :
 
     apt-get install qt4-qmake libqt4-dev build-essential libboost-dev libboost-system-dev \
         libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev \
-        libssl-dev libdb4.8++-dev libminiupnpc-dev
+        libssl-dev libdb4.8++-dev
 
 for Ubuntu >= 12.04 (please read the 'Berkely DB version warning' below):
 
@@ -41,9 +41,9 @@ then execute the following:
     qmake
     make
 
-Alternatively, install `Qt Creator`_ and open the `fenixcoin-qt.pro` file.
+Alternatively, install `Qt Creator`_ and open the `Fenixcoin-qt.pro` file.
 
-An executable named `fenixcoin-qt` will be built.
+An executable named `Fenixcoin-qt` will be built.
 
 .. _`Qt Creator`: http://qt-project.org/downloads/
 
@@ -68,11 +68,11 @@ Mac OS X
 	brew update
 	brew install boost miniupnpc openssl berkeley-db4
 
-- If using HomeBrew,  edit `fenixcoin-qt.pro` to account for library location differences. There's a diff in `contrib/homebrew/bitcoin-qt-pro.patch` that shows what you need to change, or you can just patch by doing
+- If using HomeBrew,  edit `Fenixcoin-qt.pro` to account for library location differences. There's a diff in `contrib/homebrew/bitcoin-qt-pro.patch` that shows what you need to change, or you can just patch by doing
 
         patch -p1 < contrib/homebrew/bitcoin.qt.pro.patch
 
-- Open the fenixcoin-qt.pro file in Qt Creator and build as normal (cmd-B)
+- Open the Fenixcoin-qt.pro file in Qt Creator and build as normal (cmd-B)
 
 .. _`Qt Mac OS X SDK`: http://qt-project.org/downloads/
 .. _`MacPorts`: http://www.macports.org/install.php
@@ -85,7 +85,7 @@ Build configuration options
 UPnP port forwarding
 ---------------------
 
-To use UPnP for port forwarding behind a NAT router (recommended, as more connections overall allow for a faster and more stable fenixcoin experience), pass the following argument to qmake:
+To use UPnP for port forwarding behind a NAT router (recommended, as more connections overall allow for a faster and more stable Fenixcoin experience), pass the following argument to qmake:
 
 ::
 
@@ -150,7 +150,7 @@ Ubuntu 11.10 warning
 ====================
 
 Ubuntu 11.10 has a package called 'qt-at-spi' installed by default.  At the time of writing, having that package
-installed causes fenixcoin-qt to crash intermittently.  The issue has been reported as `launchpad bug 857790`_, but
+installed causes Fenixcoin-qt to crash intermittently.  The issue has been reported as `launchpad bug 857790`_, but
 isn't yet fixed.
 
 Until the bug is fixed, you can remove the qt-at-spi package to work around the problem, though this will presumably

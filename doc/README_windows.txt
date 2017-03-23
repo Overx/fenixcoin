@@ -1,7 +1,7 @@
 Fenixcoin 0.8.x BETA
 
-Copyright (c) 2009-2014 Bitcoin Developers
-Copyright (c) 2011-2014 Fenixcoin Developers
+Copyright (c) 2009-2013 Bitcoin Developers
+Copyright (c) 2011-2013 Fenixcoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
 file COPYING or http://www.opensource.org/licenses/mit-license.php.
 This product includes software developed by the OpenSSL Project for use in
@@ -19,7 +19,7 @@ with each other, with the help of a P2P network to check for double-spending.
 
 Setup
 -----
-Unpack the files into a directory and run fenixcoin-qt.exe.
+Unpack the files into a directory and run Fenixcoin-qt.exe.
 
 Fenixcoin-Qt is the original Fenixcoin client and it builds the backbone of the network.
 However, it downloads and stores the entire history of Fenixcoin transactions;

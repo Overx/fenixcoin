@@ -3,7 +3,7 @@
 <plist version="0.9">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>fenixcoin.icns</string>
+	<string>bitcoin.icns</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
@@ -17,17 +17,17 @@
 	<key>CFBundleExecutable</key>
 	<string>Fenixcoin-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.fenixcoin.Fenixcoin-Qt</string>
+	<string>org.Fenixcoin.Fenixcoin-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>org.fenixcoin.FenixcoinPayment</string>
+            <string>org.Fenixcoin.FenixcoinPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>fenixcoin</string>
+              <string>Fenixcoin</string>
             </array>
           </dict>
         </array>

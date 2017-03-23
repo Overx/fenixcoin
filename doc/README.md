@@ -1,8 +1,8 @@
 Fenixcoin 0.8.x BETA
 ====================
 
-Copyright (c) 2009-2014 Bitcoin Developers
-Copyright (c) 2011-2014 Fenixcoin Developers
+Copyright (c) 2009-2013 Bitcoin Developers
+Copyright (c) 2011-2013 Fenixcoin Developers
 
 Distributed under the MIT/X11 software license, see the accompanying
 file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -25,12 +25,12 @@ You need the Qt4 run-time libraries to run Fenixcoin-Qt. On Debian or Ubuntu:
 
 Unpack the files into a directory and run:
 
-- bin/32/fenixcoin-qt (GUI, 32-bit)
-- bin/32/fenixcoind (headless, 32-bit)
-- bin/64/fenixcoin-qt (GUI, 64-bit)
-- bin/64/fenixcoind (headless, 64-bit)
+- bin/32/Fenixcoin-qt (GUI, 32-bit)
+- bin/32/Fenixcoind (headless, 32-bit)
+- bin/64/Fenixcoin-qt (GUI, 64-bit)
+- bin/64/Fenixcoind (headless, 64-bit)
 
-See the documentation at the [Fenixcoin Wiki](http://fenixcoin.info)
+See the documentation at the [Fenixcoin Wiki](http://Fenixcoin.info)
 for help and more information.
 
 

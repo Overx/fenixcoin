@@ -1,4 +1,4 @@
-Mac OS X fenixcoind build instructions
+Mac OS X Fenixcoind build instructions
 ====================================
 
 Authors
@@ -72,14 +72,14 @@ Installing the dependencies using MacPorts is very straightforward.
 
     sudo port install boost db48@+no_java openssl miniupnpc
 
-### Building `fenixcoind`
+### Building `Fenixcoind`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:fenixcoin-project/fenixcoin.git fenixcoin
-        cd fenixcoin
+        git clone git@github.com:Fenixcoin-project/Fenixcoin.git Fenixcoin
+        cd Fenixcoin
 
-2.  Build fenixcoind:
+2.  Build Fenixcoind:
 
         cd src
         make -f makefile.osx
@@ -90,6 +90,14 @@ Installing the dependencies using MacPorts is very straightforward.
 
 Instructions: HomeBrew
 ----------------------
+
+#### If compiling on Maverick (10.9) 
+
+You may find it easier to add the following steps to your process.  Since QT 4.8 isn't supported on Maverick (and until I can rewrite some of this code to take advantage of QT 5.2, installing QT through homebrew will make your life easier.
+
+      brew install qt
+      
+Once you have QT installed, you might need to relink the new applications so that they appear in your Application folder, but this is unnecessary for compiling Fenixcoin.  Now move on to installing the rest of the dependencies.
 
 #### Install dependencies using Homebrew
 
@@ -107,12 +115,12 @@ If not, you can ensure that the Brew OpenSSL is correctly linked by running
 
 Rerunning "openssl version" should now return the correct version.
 
-### Building `fenixcoind`
+### Building `Fenixcoind`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/fenixcoin-project/fenixcoin.git
-        cd fenixcoin
+        git clone git@github.com:Fenixcoin-project/Fenixcoin.git Fenixcoin
+        cd Fenixcoin
 
 2.  Modify source in order to pick up the `openssl` library.
 
@@ -122,7 +130,11 @@ Rerunning "openssl version" should now return the correct version.
 
         patch -p1 < contrib/homebrew/makefile.osx.patch
 
-3.  Build fenixcoind:
+*Update*: The above #2 step has been rebuilt here. Now before you proceed to building Fenixcoind it is coing to be necessary to edit both the makefile and the Fenixcoin-qt.pro file.  You can find those edits in /contrib/homebrew/
+
+What you doing is fixing the locations of openssl, boost, and berkeley-db4 to the correct locations that homebrew installs.
+
+3.  Build Fenixcoind:
 
         cd src
         make -f makefile.osx
@@ -134,8 +146,8 @@ Rerunning "openssl version" should now return the correct version.
 Creating a release build
 ------------------------
 
-A fenixcoind binary is not included in the Fenixcoin-Qt.app bundle. You can ignore
-this section if you are building `fenixcoind` for your own use.
+A Fenixcoind binary is not included in the Fenixcoin-Qt.app bundle. You can ignore
+this section if you are building `Fenixcoind` for your own use.
 
 If you are building `litecond` for others, your build machine should be set up
 as follows for maximum compatibility:
@@ -163,23 +175,36 @@ Once dependencies are compiled, creating `Fenixcoin-Qt.app` is easy:
 
     make -f Makefile.osx RELEASE=1
 
+QT Release
+----------
+
+First, run this command:
+
+     qmake "USE_UPNP=1"
+
+Now you can run the command:
+
+     make -f Makefile
+     
+This will make the QT version of the wallet WITHOUT having to use QT Creator (since we also installed the QT components using homebrew earlier).
+
 Running
 -------
 
-It's now available at `./fenixcoind`, provided that you are still in the `src`
+It's now available at `./Fenixcoind`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./fenixcoind` to get the filename where it should be put, or just try these
+Run `./Fenixcoind` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=fenixcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Fenixcoin/fenixcoin.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/Fenixcoin/fenixcoin.conf"
+    echo -e "rpcuser=Fenixcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Fenixcoin/Fenixcoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Fenixcoin/Fenixcoin.conf"
 
 When next you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours.
 
 Other commands:
 
-    ./fenixcoind --help  # for a list of command-line options.
-    ./fenixcoind -daemon # to start the fenixcoin daemon.
-    ./fenixcoind help    # When the daemon is running, to get a list of RPC commands
+    ./Fenixcoind --help  # for a list of command-line options.
+    ./Fenixcoind -daemon # to start the Fenixcoin daemon.
+    ./Fenixcoind help    # When the daemon is running, to get a list of RPC commands
